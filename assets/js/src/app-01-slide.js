@@ -1,18 +1,22 @@
+var carousel;
 var Slide = function($container) {
-  this.$carrossel = typeof $container != 'undefined' ? $container : '.carrossel-ul';
+  this.$container = typeof $container != 'undefined' ? $container : '.carousel-ul';
+  this.$carrossel;
 
   this.init = function() {
     this.galeria();      
   }
 
   this.galeria = function() {
-      var carousel = new ch.Carousel(ch(this.$carrossel)[0], {
-          pagination: true
+      carousel = new ch.Carousel(ch(this.$container)[0], {
+          pagination: false
       });
   }
 }
 
-;(function() {
-  var $slide = new Slide();
-  $slide.init();
+var $slide = new Slide();
+var $carrossel;
+(function() {
+  $slide.init();  
 })();
+

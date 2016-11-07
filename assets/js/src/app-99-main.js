@@ -6,4 +6,4 @@ var MainMeli = {
 
 ;(function() {
   MainMeli.init();
-})
+})();
