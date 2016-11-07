@@ -1,3 +1,6 @@
+@color0: #f1f1f1; // Appears 2 times
+@height0: 2.5em; // Appears 2 times
+
 .questoes-tabs {
   
     float: left;
@@ -6,16 +9,48 @@
     padding-top: 20px;
     margin: 20px 0;
 
-    .ch-box-lite {
-      .tabs-content {
-        background: #fff;
+
+    input {
+      width: 1px;
+      height: @height0;
+      visibility: hidden;
+      &:hover+label {
+        background: #dddddd;
+        color: #666666;
+      }
+      &:checked+label {
+        background: @color0;
+        color: #444444;
+        position: relative;
+        z-index: 6;
+      }
+    }
+
+   .ch-box-lite {
+      position: relative;
+      z-index: 5;
+      div {
+        opacity: 0;
+        padding: 1.5em;
+        position: absolute;
         z-index: -100;
       }
     }
 
-}
-
-a#tab1-a:checked ~  .tabs-content #tab1-a,
-a#tab1-b:checked ~  .tabs-content #tab1-b {
-  z-index: 100;
+  input#tab-1 {
+    &:checked~.ch-box-lite {
+      div#content-tab1 {
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+  }
+  input#tab-2 {
+    &:checked~.ch-box-lite {
+      div#content-tab2 {
+        opacity: 1;
+        z-index: 100;
+      }
+    }
+  }
 }

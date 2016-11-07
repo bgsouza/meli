@@ -3,7 +3,9 @@ var MainMeli = {
 
       /*Init Galeria*/
       var $slide = new Slide();
-      $slide.init();  
+      $slide.init();
+
+      //var tabs = new ch.Tabs(ch(".questoes-tabs")[0]);  
       
   }
 }

@@ -1,4 +1,3 @@
-var carousel;
 var Slide = function($container) {
   this.$container = typeof $container != 'undefined' ? $container : '.carousel-ul';
   this.$carrossel;
@@ -8,7 +7,7 @@ var Slide = function($container) {
   }
 
   this.galeria = function() {
-      carousel = new ch.Carousel(ch(this.$container)[0], {
+      this.$carousel = new ch.Carousel(ch(this.$container)[0], {
           pagination: false
       });
   }
