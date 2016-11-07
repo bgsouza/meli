@@ -1,9 +1,13 @@
 var MainMeli = {
   init: function() {
 
-  },
+      /*Init Galeria*/
+      var $slide = new Slide();
+      $slide.init();  
+      
+  }
 }
 
 ;(function() {
-  MainMeli.init();
+ window.addEventListener("load", function(event) { MainMeli.init();}); //bug load chico-ui.min.js
 })();

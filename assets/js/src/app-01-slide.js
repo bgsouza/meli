@@ -14,9 +14,3 @@ var Slide = function($container) {
   }
 }
 
-var $slide = new Slide();
-var $carrossel;
-(function() {
-  $slide.init();  
-})();
-

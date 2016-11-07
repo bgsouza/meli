@@ -9,11 +9,13 @@
     .ch-box-lite {
       .tabs-content {
         background: #fff;
-      }
-
-      #tab1-a:target, #tab1-b:target {
-        z-index: 1;
+        z-index: -100;
       }
     }
 
+}
+
+a#tab1-a:checked ~  .tabs-content #tab1-a,
+a#tab1-b:checked ~  .tabs-content #tab1-b {
+  z-index: 100;
 }
