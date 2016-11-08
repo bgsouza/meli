@@ -30,6 +30,7 @@
       position: relative;
       z-index: 5;
       min-height: 150px;
+      overflow: auto;
       div {
         opacity: 0;
         padding: 1.5em;
@@ -51,6 +52,30 @@
       div#content-tab2 {
         opacity: 1;
         z-index: 100;
+      }
+    }
+  }
+
+  .opnioes {
+    width: 93%;
+    
+    dl {
+      dt {
+        color: #39761d;
+
+        &:nth-of-type(odd) {
+          color: #205a97;
+        }
+      }
+
+      dd {
+        background: #cfe2fc;
+          padding: 5px;
+          margin-left: 0;
+
+        &:nth-of-type(even) {
+          background: #dbebd4;
+        }
       }
     }
   }
